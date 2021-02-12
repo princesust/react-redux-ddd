@@ -1,24 +1,20 @@
 import React from 'react'
 
 import Icon from 'books/infra/fontawesome/components/Icon'
-import Typography from 'ui/Typography'
 
 import { BaseButton } from './styles'
 
-interface AddButtonProps {
-  children: string
-}
-
-function AddButton(props: AddButtonProps) {
-  const { children } = props
+const AddButton = React.forwardRef(function AddButton(
+  props: React.ComponentPropsWithoutRef<'button'>,
+  ref: React.Ref<HTMLButtonElement>
+) {
+  const { children, ...rest } = props
   return (
-    <BaseButton>
-      <Typography>
-        <Icon icon="plus" />
-        {children}
-      </Typography>
+    <BaseButton ref={ref} {...rest}>
+      <Icon icon="plus" />
+      {children}
     </BaseButton>
   )
-}
+})
 
 export default React.memo(AddButton)

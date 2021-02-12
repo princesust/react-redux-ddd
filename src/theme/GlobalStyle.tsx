@@ -1,9 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
-import Fonts from './Fonts'
 
 export default createGlobalStyle`
-  ${Fonts}
-  
   * {
     margin: 0px;
     padding: 0px;

@@ -1,0 +1,6 @@
+export * from './Container'
+export * from './Cover'
+export * from './Details'
+export * from './Title'
+export * from './Anchor'
+export * from './Author'

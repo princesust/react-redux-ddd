@@ -3,18 +3,22 @@ import ReactDOM from 'react-dom'
 import { compose } from 'redux'
 import { Provider } from 'react-redux'
 
-import createStore from 'books/application/store/createStore'
+import createStoreFromInitialState from 'store/createStoreFromInitialState'
+import { CachedState } from 'books/domain/CachedState'
+import loadStateFromLocalStorage from 'books/application/utils/loadStateFromLocalStorage'
 
 import App from './App'
 
 declare global {
   interface Window {
     // eslint-disable-next-line camelcase
-    _bf_REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose
+    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__?: typeof compose
   }
 }
 
-const store = createStore()
+const initialState = loadStateFromLocalStorage()
+
+const store = createStoreFromInitialState(initialState as CachedState)
 
 ReactDOM.render(
   <React.StrictMode>

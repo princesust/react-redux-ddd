@@ -4,6 +4,6 @@ import Icon from 'books/infra/fontawesome/components/Icon'
 
 export const Brandmark = styled(Icon).attrs(() => ({ icon: 'book-open' }))`
   color: ${({ theme }) => theme.colors.primary.default};
-  margin: 16px;
+  margin: 16px 16px 16px 0px;
   font-size: 40px;
 `

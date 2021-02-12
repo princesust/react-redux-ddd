@@ -6,5 +6,8 @@ export interface BooksPayload {
   copyright: string
   num_results: number
   last_modified: string
-  results: Book[]
+  results: {
+    bestsellers_date: string
+    books: Book[]
+  }
 }

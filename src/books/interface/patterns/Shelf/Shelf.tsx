@@ -1,39 +1,64 @@
 import React from 'react'
+import { bindActionCreators, Dispatch } from 'redux'
+import { connect, ConnectedProps } from 'react-redux'
 
-import { Book } from 'books/domain/Book'
+import { RootState } from 'store/RootState'
+import { ListsState } from 'books/domain/ListsState'
+import { BooksState } from 'books/domain/BooksState'
+import getBooksByList from 'books/application/actions/getBooksByList'
+import sortBooksByOption from 'books/application/utils/sortBooksByOption'
+import LoadMore from 'books/interface/patterns/LoadMore'
+import Book from 'books/interface/patterns/Book'
+import ShelfContainer from 'books/interface/patterns/ShelfContainer'
+import ShelfLoader from 'books/interface/patterns/ShelfLoader'
 
-import { Container } from './styles'
+type StateShelfProps = Pick<BooksState, 'books' | 'loaded'> & Pick<ListsState, 'listSelected' | 'listSortOption'>
 
-interface ShelfProps {
-  books?: Book[]
-}
+const mapState = (state: RootState): StateShelfProps => ({
+  books: state.books.books,
+  listSelected: state.filters.listSelected,
+  loaded: state.books.loaded,
+  listSortOption: state.filters.listSortOption
+})
+
+const mapDispatch = (dispatch: Dispatch) =>
+  bindActionCreators(
+    {
+      getBooksByList
+    },
+    dispatch
+  )
+
+const connector = connect(mapState, mapDispatch)
+
+type ShelfProps = ConnectedProps<typeof connector>
 
 function Shelf(props: ShelfProps): React.ReactElement {
-  const { books } = props
+  const { listSelected, books, getBooksByList, loaded, listSortOption } = props
+
+  React.useEffect(() => {
+    getBooksByList(listSelected)
+  }, [getBooksByList, listSelected])
+
+  const sortedBooks = React.useMemo(() => {
+    if (loaded && books && listSortOption) {
+      return sortBooksByOption(books, listSortOption)
+    }
+    return books
+  }, [books, listSortOption, loaded])
+
+  if (!loaded) {
+    return <ShelfLoader />
+  }
+
   return (
-    <Container>
-      {/* {books
-        .sort(({ [sortBy]: a }, { [sortBy]: b }) => (a < b ? -1 : a > b ? 1 : 0))
-        .map(book => (
-          <Book
-            view={view}
-            book={{
-              id: book.primary_isbn13,
-              title: book.title,
-              image_url: book.book_image,
-              description: book.description,
-              author: book.author
-            }}
-            actions={actions}
-            onSave={() => {
-              actions.saveBookFromList(book)
-            }}
-            onRemove={() => actions.removeBook(saved.find(({ id }) => id === book.primary_isbn13))}
-            saved={saved.some(({ id }) => id === book.primary_isbn13)}
-          />
-        ))} */}
-    </Container>
+    <ShelfContainer>
+      {sortedBooks.map(book => (
+        <Book key={book.id} book={book} />
+      ))}
+      <LoadMore />
+    </ShelfContainer>
   )
 }
 
-export default Shelf
+export default connector(Shelf)

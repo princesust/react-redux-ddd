@@ -5,7 +5,7 @@ export const Logo = styled.div`
   align-items: center;
   font-size: 30px;
   font-weight: 700;
-  color: ${({ theme }) => theme.colors.grey.dark};
+  color: ${({ theme }) => theme.colors.grey.darkest};
   vertical-align: middle;
   cursor: pointer;
 `

@@ -2,17 +2,17 @@ import React from 'react'
 import { Router } from '@reach/router'
 
 import DefaultThemeProvider from 'theme/DefaultThemeProvider'
-// import Bookshelf from 'pages/BookShelf/Bookshelf';
-// import BookDetails from 'pages/BookDetails/BookDetails';
 import Overview from 'books/interface/pages/Overview'
+import SavedBookShelf from 'books/interface/pages/SavedBookShelf'
+import BookDetails from 'books/interface/pages/BookDetails'
 
 function App() {
   return (
     <DefaultThemeProvider>
       <Router>
         <Overview path="/*listName" />
-        {/* <BookDetails path="books/:bookId" />
-        <Bookshelf path="saved" /> */}
+        <BookDetails path="books/:bookId" />
+        <SavedBookShelf path="saved" />
       </Router>
     </DefaultThemeProvider>
   )

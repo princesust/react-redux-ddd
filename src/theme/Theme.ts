@@ -1,7 +1,9 @@
 export const Colors = {
   primary: {
     default: '#593ca2',
-    gradient: '#823aa5'
+    gradient: '#823aa5',
+    light: '#7e89a9',
+    lightest: '#f5f7fa'
   },
   secondary: {
     default: '#d6216b'
@@ -22,6 +24,11 @@ export const Colors = {
   }
 }
 
+export enum Padding {
+  vertical = '40px',
+  horizontal = '40px'
+}
+
 export enum FontSize {
   text = '16px',
   title = '36px'
@@ -34,9 +41,15 @@ export enum Devices {
   desktop = '1439px'
 }
 
+export enum Transitions {
+  default = '150ms ease-in-out'
+}
+
 const theme = {
   colors: Colors,
   devices: Devices,
+  transitions: Transitions,
+  padding: Padding,
   typography: {
     fontSize: FontSize
   }
