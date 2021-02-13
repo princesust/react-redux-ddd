@@ -6,7 +6,8 @@ import MenuItem from '@material-ui/core/MenuItem'
 import FormControl from '@material-ui/core/FormControl'
 import InputLabel from '@material-ui/core/InputLabel'
 
-import { RootState } from 'store/RootState'
+import { RootState } from 'shared/domain/RootState'
+
 import { ListsState } from 'books/domain/ListsState'
 import getLists from 'books/application/actions/getLists'
 import selectList from 'books/application/actions/selectList'

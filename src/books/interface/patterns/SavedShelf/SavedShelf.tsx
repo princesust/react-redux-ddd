@@ -1,7 +1,8 @@
 import React from 'react'
 import { connect, ConnectedProps } from 'react-redux'
 
-import { RootState } from 'store/RootState'
+import { RootState } from 'shared/domain/RootState'
+
 import { ListsState } from 'books/domain/ListsState'
 import { BooksState } from 'books/domain/BooksState'
 import sortBooksByOption from 'books/application/utils/sortBooksByOption'

@@ -2,8 +2,10 @@ import React from 'react'
 import { bindActionCreators, Dispatch } from 'redux'
 import { connect, ConnectedProps } from 'react-redux'
 
-import { RootState } from 'store/RootState'
+import { RootState } from 'shared/domain/RootState'
+
 import Typography from 'ui/Typography'
+
 import AddButton from 'books/interface/patterns/AddButton'
 import SavedButton from 'books/interface/patterns/SavedButton'
 import { Book as BookType } from 'books/domain/Book'

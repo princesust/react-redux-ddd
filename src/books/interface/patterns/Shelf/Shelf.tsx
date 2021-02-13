@@ -2,7 +2,8 @@ import React from 'react'
 import { bindActionCreators, Dispatch } from 'redux'
 import { connect, ConnectedProps } from 'react-redux'
 
-import { RootState } from 'store/RootState'
+import { RootState } from 'shared/domain/RootState'
+
 import { ListsState } from 'books/domain/ListsState'
 import { BooksState } from 'books/domain/BooksState'
 import getBooksByList from 'books/application/actions/getBooksByList'

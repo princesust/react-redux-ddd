@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Icon from 'books/infra/fontawesome/components/Icon'
+import Icon from 'shared/infra/fontawesome/components/Icon'
 import Button from 'ui/Button'
 
 export const BaseButton = styled(Button)`

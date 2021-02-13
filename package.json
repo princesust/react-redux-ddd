@@ -1,5 +1,5 @@
 {
-  "name": "recruiting-ui",
+  "name": "bookcues",
   "version": "0.1.0",
   "private": true,
   "engines": {
@@ -8,7 +8,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --setupFilesAfterEnv ./src/shared/infra/testing-library/setupTests.ts",
+    "test:ci": "npm run test -- --watchAll=false",
     "lint": "eslint --ext .ts,.tsx ./src",
     "storybook": "start-storybook -p 6006 -s public"
   },
@@ -62,11 +63,12 @@
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
+    "ts-jest": "^26.5.1",
     "typescript": "^4.1.3"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn prettier --check ./src && yarn lint && yarn build"
+      "pre-commit": "yarn prettier --check ./src && yarn lint && yarn build && yarn test:ci"
     }
   },
   "browserslist": {

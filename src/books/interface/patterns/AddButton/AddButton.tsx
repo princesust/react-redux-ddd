@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Icon from 'books/infra/fontawesome/components/Icon'
+import Icon from 'shared/infra/fontawesome/components/Icon'
 
 import { BaseButton } from './styles'
 
