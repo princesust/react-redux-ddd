@@ -2,6 +2,9 @@
 
 ![Lint, build and test](https://github.com/jonatassales/appcues/workflows/Lint,%20build%20and%20test/badge.svg)
 
+## Demo
+[Bookcues](https://appcues.vercel.app/)
+
 ## Architecture
 O focused more on organization, architecture and cleaning up the code. The aplications is an experimental project built on top of `create-react-app` using `Redux`, `Typescript` and the `Layered Architecture` approach. The main reason for this is to test Redux with Typescript with end up being a really good surprise for me, they worked very wwll together. The purpose regarding the architecture approach is to make the applcation scallable as it uses modules. Redux has a very particular way to transit state generating a lot of boilerplating. That'swhy the modularity is a good alternative in my opinion.
 
@@ -13,7 +16,7 @@ Typescript is known as a "bug safe" language as it gets a lot buugs in build tim
 
 ### Layred Architecture
 Is an architectural approach the separate concerns into 4 types (in terms of frontend): Application, which is responsible for application implementationn logic like actions, types, reducers and so on. Domain is responsible for defining the domain business data and logic, it's easy to read and identify what the application/bounded context does. Infrastructure is everything that is not directly related to the business, like third-party libs. Interface are all the visual stuff like components, templates and pages.
-![Layered Architecture](https://github.com/jonatassales/appcues/docs/images/layered.png?raw=true)
+![Layered Architecture](/docs/images/layered.png?raw=true)
 
 ## Improvments
 
@@ -22,8 +25,8 @@ I skipped some features like creating a book to have more time to do new ones. I
 
 ### Lightouse
 I've got really good scores on SEO, Best Practices and Accessibility (100/100) all of them
-![Lighthouse scores](https://github.com/jonatassales/appcues/docs/images/scores.png?raw=true)
+![Lighthouse scores](/docs/images/scores.png?raw=true)
 
 ### Performance
 Performance was also very good, thanks to `create-react-app` that split the bundle chunks and managed infrastructure accordingly.
-![Performance metrics](https://github.com/jonatassales/appcues/docs/images/perf.png?raw=true)
+![Performance metrics](/docs/images/perf.png?raw=true)
