@@ -1,12 +1,13 @@
 import { createStore as createReduxStore, applyMiddleware, compose, Store, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 
+import { RootState } from 'shared/domain/RootState'
+
 import { RootActions } from 'books/domain/RootActions'
 import booksReducer from 'books/application/reducers/books'
 import filtersReducer from 'books/application/reducers/filters'
 import viewReducer from 'books/application/reducers/view'
 
-import { RootState } from './RootState'
 import subscribe from './subscribe'
 import { CachedState } from 'books/domain/CachedState'
 

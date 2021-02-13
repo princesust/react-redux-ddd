@@ -2,9 +2,11 @@ import React from 'react'
 import { bindActionCreators, Dispatch } from 'redux'
 import { connect, ConnectedProps } from 'react-redux'
 
-import { RootState } from 'store/RootState'
+import { RootState } from 'shared/domain/RootState'
+
 import InfoItem from 'ui/InfoItem'
 import Typography, { TypographyVariant } from 'ui/Typography'
+
 import { BooksState } from 'books/domain/BooksState'
 import saveBookFromList from 'books/application/actions/saveBookFromList'
 import removeBook from 'books/application/actions/removeBook'

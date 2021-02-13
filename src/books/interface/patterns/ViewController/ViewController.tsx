@@ -2,8 +2,9 @@ import React from 'react'
 import { bindActionCreators, Dispatch } from 'redux'
 import { connect, ConnectedProps } from 'react-redux'
 
-import Icon from 'books/infra/fontawesome/components/Icon'
-import { RootState } from 'store/RootState'
+import { RootState } from 'shared/domain/RootState'
+import Icon from 'shared/infra/fontawesome/components/Icon'
+
 import { ViewState } from 'books/domain/ViewState'
 import selectView from 'books/application/actions/selectView'
 

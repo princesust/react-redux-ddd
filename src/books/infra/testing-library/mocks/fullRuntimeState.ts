@@ -1,4 +1,4 @@
-import { RootState } from 'store/RootState'
+import { RootState } from 'shared/domain/RootState'
 
 import book from './book'
 import list from './list'

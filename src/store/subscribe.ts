@@ -1,10 +1,10 @@
 import { Store } from 'redux'
 import throttle from 'lodash.throttle'
 
+import { RootState } from 'shared/domain/RootState'
+
 import saveStateInLocalStorage from 'books/application/utils/saveStateInLocalStorage'
 import { RootActions } from 'books/domain/RootActions'
-
-import { RootState } from './RootState'
 
 export default function subscribe(store: Store<RootState, RootActions>): void {
   store.subscribe(

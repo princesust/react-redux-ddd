@@ -1,7 +1,8 @@
 import React from 'react'
 import { Provider as ReduxProvider } from 'react-redux'
 
-import { RootState } from 'store/RootState'
+import { RootState } from 'shared/domain/RootState'
+
 import createStoreFromInitialState from 'store/createStoreFromInitialState'
 import LoadMoreButton from 'books/interface/patterns/LoadMore'
 import fullRuntimeState from 'books/infra/testing-library/mocks/fullRuntimeState'
