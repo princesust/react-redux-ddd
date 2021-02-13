@@ -10,7 +10,7 @@ const SavedButton = React.forwardRef(function AddButton(
 ) {
   const { children, ...rest } = props
   return (
-    <TextButton ref={ref} {...rest}>
+    <TextButton ref={ref} {...rest} data-testid="saved-button">
       <Icon icon="plus" />
       {children}
     </TextButton>
