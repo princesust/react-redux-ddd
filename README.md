@@ -25,7 +25,7 @@ Is an architectural approach the separate concerns into 4 types (in terms of fro
 I skipped some features like creating a book to have more time to do new ones. I've created a pagination with a infinit loader button that keeps loading books by the offset. Also, added a theme structure and attached to the styled components making them follow a contract. I've also added loaders for better feedback experience.
 
 ### Lightouse
-I've got really good scores on SEO, Best Practices and Accessibility (100/100) all of them
+I've got really good scores on SEO, Best Practices and Accessibility (100/100) in almost all of them
 
 ![Lighthouse scores](/docs/images/scores.png?raw=true)
 
