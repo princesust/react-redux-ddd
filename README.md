@@ -41,12 +41,12 @@ I've used a design doc approach with `storybook`. I separated visual components 
 I prefer to apply the single responsibility `SOLID` principle in front-end as well, so every component or styled-component has its own file. It's easier to maintain. Some of the styles I did't touch, just moved around, mostly because of the time, some I had to re-implement.
 
 ## Tests
-I've used `jest` with `testing-library` in order to right tests. Even though knowing that TDD is a great strategy because shows you a better way to re-implement a piece of code in a better way, I prefer to write tests after implementation. I also get the benefit of going back to the implementation looking closely to the test I made and then getting into the TDD cycle. I think integration tests gives you more confidence about the application, so I like to write them more. unit tests are also important for business logic and finding bugs which is more difficult with integration and E2E tests. Isolated layers like `actions`, `reducers` and components, gives you the false confidence that they work well together which sometimes might not be the case. Regarding code coverage I only look at it as a metric to see where my code is not covered and not to guide my development. This is totally opinative perspective based on stuff I read [here](https://kentcdodds.com/blog/write-tests/) and [here](https://martinfowler.com/bliki/TestCoverage.html). I'm open to new ideas though. I'm also learning about the Redux community and the cool stuff we already have like libs for mocking and the right ways to do it.
+I've used `jest` with `testing-library` in order to write tests. Even though knowing that TDD is a great strategy because shows you a better way to re-implement a piece of code in a better way, I prefer to write tests after implementation. I also get the benefit of going back to the implementation looking closely to the test I made and then getting into the TDD cycle. I think integration tests gives you more confidence about the application, so I like to write them more. unit tests are also important for business logic and finding bugs which is more difficult with integration and E2E tests. Isolated layers like `actions`, `reducers` and components, gives you the false confidence that they work well together which sometimes might not be the case. Regarding code coverage I only look at it as a metric to see where my code is not covered and not to guide my development. This is totally opinative perspective based on stuff I read [here](https://kentcdodds.com/blog/write-tests/) and [here](https://martinfowler.com/bliki/TestCoverage.html). I'm open to new ideas though. I'm also learning about the Redux community and the cool stuff we already have like libs for mocking and the right ways to do it.
 
 ## CI and Automation
 
 ### Pipeline
-I've used `github actions` to build the pipeline to test, lint and build basically. Any PR is allowed to merge or rebase if those don't pass.
+I've used `github actions` to build the pipeline to test, lint and build basically. No PR is allowed to merge or rebase if those don't pass.
 
 ### Deploy
 I've deployed the app on `Vercel` which already have a good integration with github environments.
@@ -60,7 +60,7 @@ I'm not familiar with `Redux` since it's been almost 4 years I don't work with i
 The mais edge case was the books IDs. The NYT api didn't have a `getBookByID` endpoint. Actually the books didn't have IDs at all, so I decided to give them one by using a UUID lib. The problem with this was that even it's ok to manipulate books with the ID, I only get them when fetching the books, which is not the case when you are in the `BookDetails` page. If I refresh the page I don't have the books in memory to compare anymore, and I decided not to maintain them in local storage because of the size limit and it's not best practice at all. The perfect situation would be if the books have a native id and the api have a way to get them by it. I even thought about transit them through jwt tokens via query parameters but it was also not a good idea thinking about SEO. I end up doing a workaround just to not let the app crash.
 
 ### What I could've done better
-I would work more on the design system implementations and separation of concerns. I'd also apply `windowing` to the grid and list. I was about to do so but virtualize a grid is more complex than lists, so I gave up on this.
+I would work more on the design system implementations and separation of concerns. I'd also apply `windowing` to the grid and list. I was about to do so but virtualize a grid is more complex than lists, so I gave up on this because of the deadline.
 
 ## Running the application
 
@@ -99,7 +99,7 @@ yarn storybook
 ```
 
 ### Production build
-I recommend using [serve](https://www.npmjs.com/package/serve) (For production build only) by Vercel, so you can run in you terminal:
+I recommend using [serve](https://www.npmjs.com/package/serve) by Vercel, so you can run in you terminal:
 ```bash
 yarn global add serve
 ```
