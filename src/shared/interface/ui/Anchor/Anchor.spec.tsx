@@ -4,7 +4,7 @@ import { cleanup } from '@testing-library/react'
 import customRender from 'shared/infra/testing-library/helpers/customRender'
 
 import Anchor from './Anchor'
-import { Colors } from 'theme/Theme'
+import { Colors } from 'shared/interface/theme/Theme'
 
 describe('UI/Anchor', () => {
   afterEach(cleanup)

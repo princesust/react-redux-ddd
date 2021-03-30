@@ -1,7 +1,7 @@
 import React from 'react'
 import { render, RenderResult } from '@testing-library/react'
 
-import DefaultThemeProvider from 'theme/DefaultThemeProvider'
+import DefaultThemeProvider from 'shared/interface/theme/DefaultThemeProvider'
 
 interface ProvidersProps {
   children?: React.ReactNode

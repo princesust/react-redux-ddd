@@ -1,7 +1,7 @@
 import React from 'react'
 import { Provider as ReduxProvider } from 'react-redux'
 
-import createStoreFromInitialState from 'store/createStoreFromInitialState'
+import createStoreFromInitialState from 'shared/application/store/createStoreFromInitialState'
 import Book from 'books/interface/patterns/Book'
 import bookMock from 'books/infra/testing-library/mocks/book'
 import differentBookMock from 'books/infra/testing-library/mocks/differentBook'

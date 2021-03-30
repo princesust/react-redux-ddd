@@ -1,12 +1,13 @@
 export const Colors = {
   primary: {
-    default: '#593ca2',
-    gradient: '#823aa5',
-    light: '#7e89a9',
+    default: '#262626',
+    gradient: '#3b3b3b',
+    light: '#757575',
     lightest: '#f5f7fa'
   },
   secondary: {
-    default: '#d6216b'
+    default: '#e50914',
+    light: '#ed585f'
   },
   black: {
     dark: '#1C1C1C',

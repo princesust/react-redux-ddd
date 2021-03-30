@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import Button from 'ui/Button'
+import Button from 'shared/interface/ui/Button'
 
 export const LoadMoreButton = styled(Button)`
   width: 300px;

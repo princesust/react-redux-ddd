@@ -1,7 +1,7 @@
 import React from 'react'
 import { Router } from '@reach/router'
 
-import DefaultThemeProvider from 'theme/DefaultThemeProvider'
+import DefaultThemeProvider from 'shared/interface/theme/DefaultThemeProvider'
 import Overview from 'books/interface/pages/Overview'
 import SavedBookShelf from 'books/interface/pages/SavedBookShelf'
 import BookDetails from 'books/interface/pages/BookDetails'

@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from '@reach/router'
 
-import Typography from 'ui/Typography'
-import Anchor from 'ui/Anchor'
+import Typography from 'shared/interface/ui/Typography'
+import Anchor from 'shared/interface/ui/Anchor'
 
 import { Container } from './styles'
 

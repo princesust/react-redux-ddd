@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Typography from 'ui/Typography'
+import Typography from 'shared/interface/ui/Typography'
 
 import { Container } from './styles'
 

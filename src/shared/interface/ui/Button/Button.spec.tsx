@@ -4,7 +4,7 @@ import { cleanup, fireEvent } from '@testing-library/react'
 import customRender from 'shared/infra/testing-library/helpers/customRender'
 
 import Button from './Button'
-import { Colors } from 'theme/Theme'
+import { Colors } from 'shared/interface/theme/Theme'
 
 describe('UI/Button', () => {
   afterEach(cleanup)

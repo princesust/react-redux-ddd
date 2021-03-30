@@ -10,7 +10,7 @@ function Banner() {
     <Container>
       <Logo onClick={handleLogoClick}>
         <Brandmark />
-        Bookcues
+        NYT Books
       </Logo>
       <StyledLink to="saved">Saved Books</StyledLink>
     </Container>

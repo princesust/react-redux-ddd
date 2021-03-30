@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Label from 'ui/Label'
+import Label from 'shared/interface/ui/Label'
 
 export default { title: 'UI/Label' }
 

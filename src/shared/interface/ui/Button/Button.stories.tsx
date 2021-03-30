@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Button from 'ui/Button'
+import Button from 'shared/interface/ui/Button'
 
 export default { title: 'UI/Button' }
 

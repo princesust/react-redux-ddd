@@ -4,8 +4,8 @@ import { connect, ConnectedProps } from 'react-redux'
 
 import { RootState } from 'shared/domain/RootState'
 
-import InfoItem from 'ui/InfoItem'
-import Typography, { TypographyVariant } from 'ui/Typography'
+import InfoItem from 'shared/interface/ui/InfoItem'
+import Typography, { TypographyVariant } from 'shared/interface/ui/Typography'
 
 import { BooksState } from 'books/domain/BooksState'
 import saveBookFromList from 'books/application/actions/saveBookFromList'

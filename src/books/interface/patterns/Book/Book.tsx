@@ -4,7 +4,7 @@ import { connect, ConnectedProps } from 'react-redux'
 
 import { RootState } from 'shared/domain/RootState'
 
-import Typography from 'ui/Typography'
+import Typography from 'shared/interface/ui/Typography'
 
 import AddButton from 'books/interface/patterns/AddButton'
 import SavedButton from 'books/interface/patterns/SavedButton'

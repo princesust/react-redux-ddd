@@ -8,7 +8,7 @@ import { RootState } from 'shared/domain/RootState'
 import fullRuntimeState from 'books/infra/testing-library/mocks/fullRuntimeState'
 import bookMock from 'books/infra/testing-library/mocks/book'
 import differentBookMock from 'books/infra/testing-library/mocks/differentBook'
-import createStoreFromInitialState from 'store/createStoreFromInitialState'
+import createStoreFromInitialState from 'shared/application/store/createStoreFromInitialState'
 
 import Shelf from './Shelf'
 

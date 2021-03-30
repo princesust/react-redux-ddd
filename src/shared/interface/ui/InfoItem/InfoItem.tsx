@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Typography from 'ui/Typography'
-import Label from 'ui/Label'
+import Typography from 'shared/interface/ui/Typography'
+import Label from 'shared/interface/ui/Label'
 
 import { Container, Info } from './styles'
 

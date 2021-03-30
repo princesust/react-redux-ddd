@@ -1,6 +1,6 @@
 import React from 'react'
 
-import InfoItem from 'ui/InfoItem'
+import InfoItem from 'shared/interface/ui/InfoItem'
 
 export default { title: 'UI/InfoItem' }
 

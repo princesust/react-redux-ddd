@@ -6,7 +6,7 @@ export const TextButton = styled.button`
   border: none;
   font-size: ${({ theme }) => theme.typography.fontSize.text};
   background: none;
-  color: #1eb5c4;
+  color: ${({ theme }) => theme.colors.secondary.light};
   display: flex;
   cursor: pointer;
   ${Icon} {

@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { compose } from 'redux'
 import { Provider } from 'react-redux'
 
-import createStoreFromInitialState from 'store/createStoreFromInitialState'
+import createStoreFromInitialState from 'shared/application/store/createStoreFromInitialState'
 import { CachedState } from 'books/domain/CachedState'
 import loadStateFromLocalStorage from 'books/application/utils/loadStateFromLocalStorage'
 
