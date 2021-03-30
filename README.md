@@ -6,7 +6,7 @@
 [NYTBooks](https://nyt-books.vercel.app/)
 
 ## Architecture
-I focused more on organization, architecture and cleaning up the code. The applications is an experimental project built on top of `create-react-app` using `Redux`, `Typescript` and the `Layered Architecture` approach. The main reason for this is to test Redux with Typescript which end up being a really good surprise for me, they worked very well together. The purpose regarding the architecture approach is to make the application scalable as it uses modules. Redux has a very particular way to transit state generating a lot of boilerplating, that's why the modularity is a good alternative in my opinion.
+The applications is an experimental project built on top of `create-react-app` using `Redux`, `Typescript` and the `Layered Architecture` approach. The main reason for this is to test Redux with Typescript which end up being a really good surprise for me, they worked very well together. The purpose regarding the architecture approach is to make the application scalable as it uses modules. Redux has a very particular way to transit state generating a lot of boilerplating, that's why the modularity is a good alternative in my opinion.
 
 ### Redux
 Redux is predictable and easy to test and scale when done right. It's been a while since I don't touch any Redux code so I had to reserve a few minutes to take a look at the documentation. Nowadays Redux as 2 approaches: `hooks` and `HOCs`. I opt for the `connect` HOC component because hooks has some downsides regarding performance if you don't use strategies like memoization. The isolation that redux brings gives you more flexibility to test and document.
